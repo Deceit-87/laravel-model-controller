@@ -18,9 +18,9 @@
     <div>
         <ul>
 
-            @foreach ($movies as $movie)
+            @foreach ($movies as $index => $movie)
                 <li>
-                    <p><a href="{{ route('show') }}">{{ $movie->title }}</a></p>
+                    <p><a href="{{url('/movie/'.$index)}}">{{ $movie->title }}</a></p>
                     <p>{{ $movie->nationality }}</p>
                     <p>{{ 'Vote' . ' ' . $movie->vote }}</p>
                 </li>

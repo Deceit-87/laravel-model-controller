@@ -10,7 +10,14 @@ class MovieController extends Controller
     public function index(){
             $movies = Movie::all();
         return view('pages.home', compact('movies'));
-        // $movies = Movie::where('vote','> o < o >= o !=',1)->get();
 
     }
+    public function show($indice){
+       $movies = Movie::all();
+       $movie = $movies[$indice];
+        
+       
+    return view('pages.show', compact('movie')); 
+    
+}
 }

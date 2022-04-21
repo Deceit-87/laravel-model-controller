@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'MovieController@index')->name('home');
 
+Route::get('/movie/{indice} ', 'MovieController@show')->name('show')->where('indice','[0-9]+') ;
 
-Route::get('/show', function(){
 
-    return view('pages.show');
-})->name('show');
+
+
 
 
 

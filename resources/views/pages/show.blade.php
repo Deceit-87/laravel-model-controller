@@ -10,7 +10,9 @@
     
 
     <div>
-        single
+        <p>{{ $movie->title }}</p>
+        <p>{{ $movie->nationality }}</p>
+        <p>{{ 'Vote' . ' ' . $movie->vote }}</p>
     </div>
 </body>
 </html>
