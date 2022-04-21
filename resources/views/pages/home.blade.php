@@ -20,9 +20,9 @@
 
             @foreach ($movies as $movie)
                 <li>
-                    <p>{{ $movie->title }}</p>
+                    <p><a href="{{ route('show') }}">{{ $movie->title }}</a></p>
                     <p>{{ $movie->nationality }}</p>
-                    <p>{{ 'Vote'.' '.$movie->vote }}</p>
+                    <p>{{ 'Vote' . ' ' . $movie->vote }}</p>
                 </li>
             @endforeach
 
